@@ -207,8 +207,9 @@ input[type="number"] {
   padding: 15px;
   border-radius: 10px;
   color: #666;
-  cursor: not-allowed;
-  background: #ccc!important;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #f9f5f5;
 }
 
 .linkPage{
