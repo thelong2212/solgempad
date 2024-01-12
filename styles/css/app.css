@@ -1,37 +1,3 @@
-@media only screen and (max-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
-@media only screen and (max-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media only screen and (max-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-.image-background{
-  background-size: cover;
-  background-image: url(/images/touch/Background.jpg) !important;
-}
 * {
   margin: 0;
   padding: 0;
@@ -47,6 +13,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
+
 }
 
 button,
@@ -60,6 +27,13 @@ a[href] {
   color: var(--text-color);
 }
 
+.background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+}
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -80,7 +54,7 @@ input[type="number"] {
 }
 
 .logoSolgempad img {
-  width: 400px;
+  width: 100%;
 }
 
 .connectWallet button {
@@ -115,7 +89,7 @@ input[type="number"] {
 }
 
 .contex-cover {
-  background-image: linear-gradient(to right, rgb(38, 59, 44), rgb(12, 71, 66));
+  background-image: linear-gradient(to right, rgb(94 157 112), rgb(12, 71, 66));
   padding: 15px 20px;
   border-radius: 15px;
   opacity: 0.9;
@@ -219,23 +193,29 @@ input[type="number"] {
   width: 100%;
   height: 100%;
   padding: 15px;
-  background-image: linear-gradient(to right, rgb(38, 59, 44), rgb(12, 71, 66));
+  background-image: linear-gradient(to right, rgb(94 157 112), rgb(12, 71, 66));
   border-radius: 10px;
   color: #fff;
   padding-right: 10rem;
-
+}
+#quantity::placeholder {
+  color: #fff !important;
+  opacity: 0.7;
 }
 
 .contribute-btn {
   margin-top: 20px;
   padding: 15px;
   border-radius: 10px;
-  color: #666;
+  color: #fff;
   font-weight: 700;
   cursor: pointer;
-  background-color: #f9f5f5;
+  background-image: linear-gradient(to right, rgb(94 157 112), rgb(12, 71, 66));
 }
 
+.contribute-btn:hover{
+  background-image: linear-gradient(to right, rgb(28 58 37), rgb(12, 71, 66));
+}
 .contribute-btn:hover {
   background-color: #757272;
   color: #fff;
@@ -243,21 +223,19 @@ input[type="number"] {
 
 .linkPage {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 }
 
 .linkPage img {
   transition: transform 0.3s ease;
+  padding: 0 10px;
+  height: 50px;
 }
 
-.linkPage img :hover {
+.hoverImg :hover {
   transform: scale(1.2);
-}
-
-.person {
-  padding: 50px 0;
 }
 
 .info-footer {
@@ -270,10 +248,6 @@ input[type="number"] {
   border-bottom: 1px solid #e5e7eb;
 }
 
-.leftFooter img {
-  width: 100%;
-}
-
 .coprRight {
   display: flex;
   justify-content: space-evenly;
@@ -281,10 +255,119 @@ input[type="number"] {
 }
 
 .coprRight span {
-  color: #e5e7eb;
+  color: #ffffff;
+  FONT-SIZE: 20PX
 }
 
 #status_p {
   color: red;
   font-style: italic;
+}
+
+.gameFi {
+  color: #fff;
+  font-weight: 700;
+  FONT-SIZE: 25PX;
+  PADDING-TOP: 5PX;
+
+}
+
+.item-silde img {
+  width: 100%;
+}
+
+.leftFooter {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+}
+.leftFooter img{
+ width: 100%;
+}
+
+@media only screen and (max-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .preSale {
+    margin: 10px 0;
+  }
+
+  .contentBySol {
+    flex-direction: column;
+  }
+
+  .body-content {
+    flex-direction: row;
+  }
+
+  .info-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+}
+
+@media only screen and (max-width: 660px) {
+  .container {
+    max-width: 640px;
+  }
+
+  .cover,
+  .preSale,
+  .logoSolgempad {
+    padding: unset;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .connectWallet button {
+    margin: 20px 0;
+  }
+
+  .contentBySol {
+    margin: unset;
+  }
+}
+
+
+@media only screen and (max-width: 470px) {
+  .container {
+    max-width: 640px;
+  }
+
+  .leftFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
