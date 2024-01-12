@@ -3,31 +3,36 @@
     max-width: 1536px;
   }
 }
+
 @media only screen and (max-width: 1280px) {
   .container {
     max-width: 1280px;
   }
 }
+
 @media only screen and (max-width: 1024px) {
   .container {
     max-width: 1024px;
+  }
 }
-}
-@media only screen and (max-width:  768px) {
+
+@media only screen and (max-width: 768px) {
   .container {
     max-width: 768px;
   }
 }
-@media only screen and (max-width:  640px) {
+
+@media only screen and (max-width: 640px) {
   .container {
     max-width: 640px;
   }
 }
 
 body {
-  background-size: cover; 
-  /* background-image: url(/images/touch/Background.jpg); */
+  background-size: cover;
+  background-image: url(/images/touch/Background.jpg) !important;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -67,7 +72,7 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
@@ -75,11 +80,12 @@ input[type="number"] {
   padding-top: 1.25rem;
 }
 
-.logoSolgempad img{
+.logoSolgempad img {
   width: 400px;
 }
-.connectWallet button{
-  background: linear-gradient(105deg,#0047ff 10%,#57048a 100%);
+
+.connectWallet button {
+  background: linear-gradient(105deg, #0047ff 10%, #57048a 100%);
   border-radius: 15px;
   color: #fff;
   cursor: pointer;
@@ -88,68 +94,81 @@ input[type="number"] {
   align-items: center;
   height: 48px;
   padding: 0 24px;
-  font-family: DM Sans,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: DM Sans, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 48px;
   display: flex;
 }
-.contentBySol{
+
+.contentBySol {
   display: flex;
   justify-content: space-between;
   margin: 50px 0;
 }
-.image-cover{
+
+.image-cover {
   margin-bottom: 25px;
 }
-.image-cover img{
+
+.image-cover img {
   width: 100%;
 }
 
-.contex-cover{
-  background-image: linear-gradient(to right, rgb(38, 59, 44) , rgb(12, 71, 66));
-  padding: 15px 20px; 
+.contex-cover {
+  background-image: linear-gradient(to right, rgb(38, 59, 44), rgb(12, 71, 66));
+  padding: 15px 20px;
   border-radius: 15px;
   opacity: 0.9;
 }
-.contex-cover p{
+
+.contex-cover p {
   color: #fff;
 }
+
 .warriors {
   color: #eed815;
   font-weight: 700;
 }
+
 .preSale {
   margin: 0 35px;
 }
-.price p{
+
+.price p {
   margin: unset;
 }
-.price{
+
+.price {
   margin: 15px 0;
 }
 
-.priceSol{
+.priceSol {
   font-weight: 700;
 }
-.solValue{
+
+.solValue {
   display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
 }
-.minSol p, .maxSol p{
+
+.minSol p,
+.maxSol p {
   margin: unset;
   color: #d6da0f;
   font-weight: 700;
 }
-.maxSol{
+
+.maxSol {
   padding-left: 10px;
   display: flex;
   align-items: center;
   color: #fff;
   font-weight: 700;
 }
-.minSol{
+
+.minSol {
   border-right: 2px solid #fff;
   padding-right: 10px;
   display: flex;
@@ -157,29 +176,35 @@ input[type="number"] {
   color: #fff;
   font-weight: 700;
 }
-.totalRaises h3{
+
+.totalRaises h3 {
   color: #fff;
   font-weight: 700;
 }
-.titlePreSale{
+
+.titlePreSale {
   color: #fff;
   font-weight: 700;
 }
-.contribute h3{
+
+.contribute h3 {
   color: #fff;
   font-weight: 700;
 }
-.contribute{
+
+.contribute {
   display: grid;
 }
-.inputContribtr{
+
+.inputContribtr {
   position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
-.solana{
+
+.solana {
   position: absolute;
   right: 0;
   top: 50%;
@@ -191,18 +216,18 @@ input[type="number"] {
   padding: 3px 10px;
 }
 
-.inputContribtr input{
+.inputContribtr input {
   width: 100%;
   height: 100%;
   padding: 15px;
-  background-image: linear-gradient(to right, rgb(38, 59, 44) , rgb(12, 71, 66));
+  background-image: linear-gradient(to right, rgb(38, 59, 44), rgb(12, 71, 66));
   border-radius: 10px;
   color: #fff;
-  padding-right: 10rem ;
-  
+  padding-right: 10rem;
+
 }
 
-.contribute-btn{
+.contribute-btn {
   margin-top: 20px;
   padding: 15px;
   border-radius: 10px;
@@ -212,37 +237,55 @@ input[type="number"] {
   background-color: #f9f5f5;
 }
 
-.linkPage{
+.contribute-btn:hover {
+  background-color: #757272;
+  color: #fff;
+}
+
+.linkPage {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin: 20px 0;
 }
 
-.person{
+.linkPage img {
+  transition: transform 0.3s ease;
+}
+
+.linkPage img :hover {
+  transform: scale(1.2);
+}
+
+.person {
   padding: 50px 0;
 }
 
-.info-footer{
+.info-footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.info-footer{
+
+.info-footer {
   border-bottom: 1px solid #e5e7eb;
 }
-.leftFooter img{
+
+.leftFooter img {
   width: 100%;
 }
-.coprRight{
+
+.coprRight {
   display: flex;
   justify-content: space-evenly;
   padding: 20px 0;
 }
-.coprRight span{
+
+.coprRight span {
   color: #e5e7eb;
 }
-#status_p{
+
+#status_p {
   color: red;
   font-style: italic;
 }
