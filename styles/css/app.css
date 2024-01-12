@@ -28,11 +28,10 @@
   }
 }
 
-body {
+.image-background{
   background-size: cover;
   background-image: url(/images/touch/Background.jpg) !important;
 }
-
 * {
   margin: 0;
   padding: 0;
