@@ -15,12 +15,6 @@
     <link rel="stylesheet" href="styles/css/app.css">
     <link rel="stylesheet" type="text/css" href="./scripts/slick-1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="./scripts/slick-1.8.1/slick/slick-theme.css" />
-    <script src="plugins/jquery/jquery.min.js"></script>
-    <script src="plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/@solana/web3.js@v1.33.0/lib/index.iife.js"></script>
-    <script type="text/javascript" src="./scripts/slick-1.8.1/slick/slick.js"></script>
-    <script type="text/javascript" src="/scripts/app.js"></script>
-    <script type="text/javascript" src="/scripts/index.js"></script>
 </head>
 
 <body class="background" style="background-image: url(images/touch/Background.jpg);">
@@ -142,7 +136,16 @@
             </div>
         </div>
         <!-- Scripts -->
-        
+        <script src="plugins/jquery/jquery.min.js"></script>
+        <script src="plugins/bootstrap/bootstrap.min.js"></script>
+
+        <!-- Development (un-minified) -->
+        <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+        <!-- Production (minified) -->
+        <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+        <script type="text/javascript" src="./scripts/slick-1.8.1/slick/slick.js"></script>
+        <script type="text/javascript" src="/scripts/app.js"></script>
+        <script type="text/javascript" src="/scripts/index.js"></script>
 </body>
 
 </html>

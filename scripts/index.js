@@ -2,12 +2,13 @@ var wallet;
 const lamports_per_sol = solanaWeb3.LAMPORTS_PER_SOL;
 async function connectWallet() {
     try {
-        wallet = await window.solana.connect();
+        const solana = window.solana; // Gán đối tượng 'solana' vào một biến cục bộ
+        wallet = await solana.connect();
         document.getElementById("connect_button").innerText = "Connected";
-        window.solana.on("connect", () => {
+        solana.on("connect", () => {
             document.getElementById("connect_button").innerText = "Connected";
         });
-    } catch (err) {  
+    } catch (err) {
         console.log(err);
     }
 }
