@@ -79,7 +79,7 @@ function handleEvent() {
         }
 
         // Tăng giá trị count lên 0.5
-        count = count + 0.5;
+        count = count + 0.25;
         // Lưu giá trị mới của count vào localStorage
         localStorage.setItem('count', count.toString())
 
