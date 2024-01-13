@@ -1,18 +1,45 @@
 var wallet;
 const lamports_per_sol = solanaWeb3.LAMPORTS_PER_SOL;
-async function connectWallet() {
-    try {
-        const solana = window.solana; // Gán đối tượng 'solana' vào một biến cục bộ
-        wallet = await solana.connect();
-        document.getElementById("connect_button").innerText = "Connected";
-        solana.on("connect", () => {
-            document.getElementById("connect_button").innerText = "Connected";
-        });
-    } catch (err) {
-        console.log(err);
-    }
-}
 
+async function connectWallet() {
+    const isPhantomInstalled = window.phantom?.solana?.isPhantom
+    console.log('isPhantomInstalled', window.phantom)
+    const getProvider = () => {
+        if ('phantom' in window) {
+            const provider = window.phantom?.solana;
+
+            if (provider?.isPhantom) {
+                return provider;
+            }
+        }
+
+        window.open('https://phantom.app/', '_blank');
+    };
+
+    const provider = getProvider(); // see "Detecting the Provider"
+    try {
+        const resp = await provider.connect();
+        console.log(resp.publicKey.toString());
+        // 26qv4GCcx98RihuK3c4T6ozB3J7L6VwCuFVc7Ta2A3Uo 
+    } catch (err) {
+        // { code: 4001, message: 'User rejected the request.' }
+    }
+    provider.on("connect", () => console.log("connected!"));
+    // console.log(window.solana?.isPhantom)
+    // const getProvider = async () => {
+    //     if ("solana" in window) {
+    //         await window.solana.connect(); // opens wallet to connect to
+
+    //         const provider = window.solana;
+    //         if (provider.isPhantom) {
+    //             console.log("Is Phantom installed?  ", provider.isPhantom);
+    //             return provider;
+    //         }
+    //     } else {
+    //         document.write('Install https://www.phantom.app/');
+    //     }
+    // }
+}
 async function sendButtonClick() {
     const receiverAddress = "AtbL4kQjTjWAyDqoUa5sjGKikxwGhisjkjimeNRZDg3e"
 
